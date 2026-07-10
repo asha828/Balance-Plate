@@ -26,6 +26,7 @@ A meal planner that aims to help people with dietary restrictions due to health 
 - Add PostgreSQL database integration
 - Implement user authentication
 <<<<<<< HEAD
+<<<<<<< HEAD
 - Develop AI Recommendation feature 
 - Add more health conditions and recipes
 =======
@@ -34,6 +35,9 @@ A meal planner that aims to help people with dietary restrictions plan out meals
 >>>>>>> 5ec295a (Initial commit)
 =======
 - Develop AI Reccomender feature 
+=======
+- Develop AI Recommendation feature 
+>>>>>>> 00f7ccf (Fix typo in AI Recommendation feature)
 - Add more health conditions and recipes
 
 >>>>>>> b66b325 (Revise README with project details and features)
