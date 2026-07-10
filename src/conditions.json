@@ -1,0 +1,17 @@
+{
+    "Celiac": [
+        "gluten-free"
+    ],
+    "Diabetes": [
+        "low-gi"
+    ],
+    "IBS": [
+        "gut-friendly"
+    ],
+    "Hypertension": [
+        "low-sodium"
+    ],
+    "Vegetarian": [
+        "vegetarian"
+    ]
+}

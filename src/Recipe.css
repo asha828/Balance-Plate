@@ -1,0 +1,145 @@
+.recipe-container {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin: 14px 0;
+}
+
+.img-area {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 10px;
+
+}
+
+.img-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+.add-button {
+    margin-top: auto;
+    margin-bottom: 18px;
+
+    padding: 12px 22px;
+
+    border: 1px solid var(--text);
+    border-radius: 14px;
+
+    background: var(--bg);
+    cursor: pointer;
+
+    font-family: "MyFont";
+    font-size: 12px;
+}
+
+.add-button:hover {
+    background: #ece3d1;
+}
+
+.recipe-tag {
+
+    margin: 0;
+    padding: 2px 9px;
+    width: fit-content;
+    border-radius: 10px;
+    background-color: var(--bg);
+}
+
+.recipe-tags {
+    font-weight: 500;
+    font-family: "MyFont", sans-serif;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+
+}
+
+.inline-container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.recipe-icon {
+    margin: 0;
+}
+
+.recipe-grid {
+
+    display: flex;
+    /* Enables Flexbox */
+    flex-wrap: wrap;
+    /* Allows cards to move to the next row when screen shrinks */
+    gap: 100px;
+    /* Creates a uniform space between cards horizontally and vertically */
+    justify-content: flex-start;
+    /* Aligns cards to the left (use 'center' to center them) */
+    padding: 20px;
+
+}
+
+.recipe-content h4 {
+    font-family: "MySecondaryFont", sans-serif;
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.25;
+    min-height: 2.5em;
+    /* enough for 2 lines */
+    margin-bottom: 14px;
+}
+
+.recipe-container {
+    margin-bottom: 12px;
+}
+
+.recipe-tags {
+    margin-bottom: 16px;
+}
+
+.filter {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    margin-top: 26px;
+}
+
+.recipe-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+
+.filter-button {
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+}
+
+.filter-button:hover {
+    transform: translateY(-2px);
+}
+
+.filter-button.active {
+    margin: 0;
+    padding: 2px 9px;
+    width: fit-content;
+    border-radius: 10px;
+    box-shadow: 0 0 0 1px var(--accent);
+}

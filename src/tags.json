@@ -1,0 +1,27 @@
+{
+  "gluten-free": {
+    "label": "Gluten Free",
+    "color": "var(--lavender-text)",
+    "bgColor": "var(--lavender-dark)"
+  },
+  "low-gi": {
+    "label": "Low GI",
+    "color": "var(--sage-text)",
+    "bgColor": "var(--sage-dark)"
+  },
+  "low-sodium": {
+    "label": "Low Sodium",
+    "color": "var(--blue-text)",
+    "bgColor": "var(--blue-dark)"
+  },
+  "gut-friendly": {
+    "label": "Gut Friendly",
+    "color": "var(--peach-text)",
+    "bgColor": "var(--peach-dark)"
+  },
+  "vegetarian": {
+    "label": "Vegetarian",
+    "color": "var(--accent)",
+    "bgColor": "var(--pink)"
+  }
+}

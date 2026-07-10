@@ -1,0 +1,62 @@
+@font-face {
+    font-family: "MyFont";
+    src: url("SNPro-VariableFont_wght.ttf");
+}
+
+:root {
+    --bg: #F7F6F2;
+    --sage: #DDE7D3;
+    --lavender: #D8CFE8;
+    --lightpink: #F8ECEB;
+    --text: #2a3631;
+}
+
+.sidebar {
+    background-color: var(--lightpink);
+    border: 2px solid var(--lightpink);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px;
+    width: 200px;
+
+
+}
+
+.sidebar button {
+    display: block;
+
+    padding: 10px 16px;
+    text-align: left;
+    cursor: pointer;
+    font-family: "MyFont", sans-serif;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: inherit;
+
+}
+
+.sidebar a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1rem;
+
+}
+
+.sidebar button:hover {
+
+    background-color: var(--bg);
+    border-radius: 10px;
+    transition: background 0.2s ease;
+
+}
+
+.sidebar button.active {
+    background-color: rgba(0, 0, 0, 0.12);
+    border-radius: 6px;
+    font-weight: bold;
+}
