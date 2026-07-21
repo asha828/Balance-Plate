@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Balance Plate
 A meal planner that aims to help people with dietary restrictions due to health conditions plan out meals that meet their needs. 
 
@@ -20,3 +21,7 @@ A meal planner that aims to help people with dietary restrictions due to health 
 - Implement user authentication
 - Develop AI Recommendation feature 
 - Add more health conditions and recipes
+=======
+# Personalized-Meal-Planner
+A meal planner that aims to help people with dietary restrictions plan out meals that meet their needs. 
+>>>>>>> 5ec295a (Initial commit)
