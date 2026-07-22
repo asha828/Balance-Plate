@@ -1,3 +1,24 @@
+h3 {
+    font-family: "MySecondaryFont", sans-serif;
+}
+
+li {
+    display: list-item;
+    text-align: left;
+    font-family: "MyFont", sans-serif;
+}
+
+li::marker {
+    color: var(--text);
+    font-size: 1em;
+    padding-left: 10px;
+}
+
+ul {
+    padding-left: 20px;
+    list-style-type: circle;
+}
+
 .condition-grid {
     display: flex;
     justify-content: center;
@@ -12,12 +33,13 @@
     flex-direction: column;
 
     flex-wrap: wrap;
-
     gap: 24px;
     margin: 14px 0;
 }
 
 .condition-content {
+
+    margin-top: 280px;
     font-family: "MySecondaryFont", sans-serif;
     color: var(--text);
     font-size: 15px;
@@ -27,8 +49,13 @@
 
 .condition-description {
 
-    padding-top: 50px;
+    padding-top: 30px;
 }
+
+.condition-description h3 {
+    text-align: left;
+}
+
 
 .condition-card-content {
 
@@ -40,8 +67,10 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
     background:
         linear-gradient(180deg,
-            #FFF9E8,
-            var(--condition));
+            #FFF8E5 0%,
+            #FEF4CD 100%);
+
+    backface-visibility: hidden;
 
 
 }
@@ -51,21 +80,20 @@
 }
 
 .img-condition {
-
-    margin-left: auto;
-    margin-right: auto;
-
+    margin-bottom: 10px;
 }
 
 .learn-button {
     position: absolute;
-    margin-top: 400px;
-    left: 57%;
+    margin-top: 820px;
+    left: 50%;
     transform: translateX(-50%);
     padding: 12px 22px;
     border: 1px solid white;
     border-radius: 14px;
-    background: var(--blue-dark);
+    background: linear-gradient(135deg,
+            var(--blue-dark),
+            #9FC3EA);
     cursor: pointer;
     color: white;
     font-family: "MyFont";
@@ -95,4 +123,81 @@
     width: 24px;
     border-radius: 999px;
     background-color: #4F7DF3;
+}
+
+/* Inner wrapper holds the actual 3D layout context */
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Activated state rotates the internal layout */
+.card-inner.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.front,
+.back {
+
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.food-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+
+}
+
+.food-content {
+    padding-left: 0px;
+    flex: 1;
+}
+
+.food-content h3 {
+    color: #9FC3EA;
+
+}
+
+.food-tag {
+
+    margin: 0;
+    padding: 2px 9px;
+    width: fit-content;
+    border-radius: 10px;
+    background-color: var(--bg);
+}
+
+.food-tags {
+    font-weight: 500;
+    font-family: "MyFont", sans-serif;
+    font-size: 14px;
+    display: flex;
+
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 0px;
+}
+
+.info-card {
+    border-top: 4px solid var(--blue-dark);
+    border-right: 4px solid var(--blue-dark);
+    background: #FFFBF2;
+    border-radius: 18px;
+    padding: 1rem;
+    margin-top: 30px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .06);
 }

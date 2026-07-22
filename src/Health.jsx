@@ -23,14 +23,11 @@ export default function Health() {
                         setCurrentIndex((currentIndex - 1 + conditions.length) % conditions.length)
                     }
                 >
-                    ◀
+                    ←
                 </button>
                 <div className='condition-card-content'>
 
-
                     <ConditionCard condition={conditions[currentIndex]} />
-
-
 
                 </div>
 
@@ -39,7 +36,7 @@ export default function Health() {
                         setCurrentIndex((currentIndex + 1) % conditions.length)
                     }
                 >
-                    ▶
+                    →
                 </button>
 
 

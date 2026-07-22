@@ -3,6 +3,9 @@ import calIcon from './Images/calories.png';
 import tagData from "./tags.json";
 import './App.css'
 import './Health.css'
+import { useState } from 'react';
+
+
 
 export function Cards({ className, title, description, titleColor, descColor, bgColor, icon, tag, tagColor }) {
     return (
@@ -96,33 +99,127 @@ export function RecipeCard({
 }
 
 export function ConditionCard({ condition }) {
+    const [isFlipped, setIsFlipped] = useState(false);
+
+    const handleFlip = () => {
+        setIsFlipped(!isFlipped);
+    };
+
+
     return (
+
+
         <div className="condition-card">
-            <div className="img-condition">
-                <img src={condition.image} alt="Health Icon" width="40" height="40" />
-            </ div >
+
+            <div className={`card-inner ${isFlipped ? 'is-flipped' : ''}`}>
+
+
+                <div className="front">
+
+
+                    <div className="condition-content">
+
+                        <div className="img-condition">
+                            <img src={condition.image} alt="Health Icon" width="50" height="50" />
+                        </div>
+                        <h2 style={{ fontSize: '30px' }}>{condition.title}</h2>
+                        <div className="condition-description">
+
+                            <p>{condition.shortDescription}</p>
+                        </div>
+
+                    </div>
+
+                    <button onClick={handleFlip} className="learn-button">
+                        Learn more ⤵︎
+                    </button>
+                </div>
+
+
+                <div className="back">
+                    <div className="condition-content">
+
+                        <div className="condition-description">
+
+                            <div className="info-card">
+                                <p>{condition.overview}</p>
+                            </div>
+
+                            <br></br>
+                            <div className="food-container">
+                                <div className="food-content">
+
+                                    <h3 style={{ fontSize: '16px', color: "var(--sage-text)" }}>✓ Foods to Eat</h3>
+                                    <br></br>
+                                    <ul>
+                                        {condition.goodFoods.map((food, id) => (
+
+                                            <li key={id}>{food}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+
+                                <div className="food-content">
+
+                                    <h3 style={{ fontSize: '17px', color: "var(--accent)" }}>✕ Foods to Avoid</h3>
+                                    <br></br>
+                                    <ul>
+                                        {condition.badFoods.map((food, id) => (
+
+                                            <li key={id}>{food}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
+                            <br></br>
+                            <h3 style={{ fontSize: '17px', color: "var(--text)" }}>Nutrition Focus: </h3>
+
+                            <br></br>
+                            <div className="food-tags">
+
+                                {condition.tags.map(tagId => {
+                                    const tag = tagData[tagId];
+                                    return (
+
+                                        <span
+                                            key={tagId}
+                                            className="food-tag"
+                                            style={{
+                                                backgroundColor: tag.bgColor,
+                                                color: tag.color
+                                            }}
+                                        >
+                                            {tag.label}
+
+                                        </span>
+                                    );
+                                })}
+                            </div>
 
 
 
-            <div className="condition-content">
-                <h2>{condition.title}</h2>
-                <div className="condition-description">
+                        </div>
+                    </div>
 
-                    <p>{condition.shortDescription}</p>
+                    <button onClick={handleFlip} className="learn-button">
+                        ⤵︎
+                    </button>
                 </div>
 
 
 
 
             </div>
-            <button className="learn-button">
-                Learn more ⤵︎
-            </button>
+
+
+        </div >
 
 
 
-        </div>
+
     );
 
+
 }
+
 

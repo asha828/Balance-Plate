@@ -6,11 +6,11 @@ import ibsIcon from './Images/intestine.png';
 const conditions = [
     {
         id: 1,
-        title: "Celiac Disease",
-        shortDescription: "An autoimmune condition triggered by gluten.",
+        title: "Celiac",
+        shortDescription: "An autoimmune disease where gluten damages the small intestine.",
 
         overview:
-            "People with celiac disease should avoid gluten because it damages the small intestine and prevents proper nutrient absorption.",
+            "Gluten damages the small intestine, making it harder to absorb nutrients.",
 
         goodFoods: [
             "Rice",
@@ -29,10 +29,10 @@ const conditions = [
             "Rye"
         ],
 
-        nutritionFocus: [
-            "Gluten-Free",
-            "Fiber",
-            "Iron"
+        tags: [
+            "gluten-free",
+            "fiber",
+            "iron"
         ],
 
         facts: [
@@ -47,10 +47,10 @@ const conditions = [
     {
         id: 2,
         title: "Type 2 Diabetes",
-        shortDescription: "Manage blood sugar with balanced nutrition.",
+        shortDescription: "A condition that affects how the body uses insulin to regulate blood sugar.",
 
         overview:
-            "Type 2 diabetes affects how the body uses insulin. Choosing balanced meals with fiber and lean protein can help support healthy blood sugar levels.",
+            "Type 2 diabetes affects insulin use. Eating fiber-rich foods and lean protein helps support healthy blood sugar.",
 
         goodFoods: [
             "Oatmeal",
@@ -69,10 +69,10 @@ const conditions = [
             "Highly Processed Snacks"
         ],
 
-        nutritionFocus: [
-            "Fiber",
-            "Protein",
-            "Whole Grains"
+        tags: [
+            "fiber",
+            "protein",
+            "gluten-free"
         ],
 
         facts: [
@@ -110,10 +110,9 @@ const conditions = [
             "Artificial Sweeteners"
         ],
 
-        nutritionFocus: [
-            "Digestive Health",
-            "Hydration",
-            "Fiber (as tolerated)"
+        tags: [
+            "gut-friendly",
+            "fiber"
         ],
 
         facts: [
@@ -128,10 +127,10 @@ const conditions = [
     {
         id: 4,
         title: "Hypertension",
-        shortDescription: "High blood pressure that can be managed with healthy lifestyle habits.",
+        shortDescription: "A condition where blood pressure remains consistently too high.",
 
         overview:
-            "Hypertension means the force of blood against the artery walls is consistently too high. Eating less sodium and more potassium-rich foods can help support healthy blood pressure.",
+            "Hypertension is high blood pressure. Eating less sodium and more potassium helps support healthy blood pressure.",
 
         goodFoods: [
             "Spinach",
@@ -150,10 +149,9 @@ const conditions = [
             "High-Sodium Frozen Meals"
         ],
 
-        nutritionFocus: [
-            "Lower Sodium",
-            "Potassium",
-            "Heart Health"
+        tags: [
+            "low-sodium",
+            "potassium"
         ],
 
         facts: [

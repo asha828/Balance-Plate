@@ -16,8 +16,11 @@ export default function Home({ setPage }) {
     return (
 
         <>
-            <div style={{ textAlign: "center" }}>
-                <h1>Eat well for <span style={{ color: "var(--accent)", fontStyle: 'italic' }}>your</span> health.</h1>
+            <div style={{ textAlign: "left" }}>
+                <br></br>
+                <h1> <span style={{ color: "var(--accent)" }}>Balance Plate</span></h1>
+
+                <h3><span style={{ color: "var(--text)", fontStyle: 'italic' }}>Find recipes that fit your health.</span> </h3>
             </div>
             <br></br>
             <br></br>
@@ -29,7 +32,7 @@ export default function Home({ setPage }) {
                     textAlign: "left", maxWidth: '400px', padding: '16px',
 
                 }}>
-                    <p>Personalized Meal Planner helps people with dietary restrictions and health conditions find safe recipes, plan their meals, and build groccery lists tailored to what your dietary needs are.</p>
+                    <p>Balance Plate helps people with dietary restrictions and health conditions find safe recipes, plan their meals, and build groccery lists tailored to what your dietary needs are.</p>
                     <br></br>
                     <br></br>
 

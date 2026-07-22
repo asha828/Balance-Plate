@@ -23,5 +23,25 @@
     "label": "Vegetarian",
     "color": "var(--accent)",
     "bgColor": "var(--pink)"
+  },
+  "fiber": {
+    "label": "Fiber",
+    "color": "var(--aqua-text)",
+    "bgColor": "var(--aqua-dark)"
+  },
+  "iron": {
+    "label": "Iron",
+    "color": "var(--coral-text)",
+    "bgColor": "var(--coral-dark)"
+  },
+  "protein": {
+    "label": "Protein",
+    "color": "var(--butter-text)",
+    "bgColor": "var(--butter-dark)"
+  },
+  "potassium": {
+    "label": "Potassium",
+    "color": "var(--mint-text)",
+    "bgColor": "var( --mint-dark)"
   }
 }
