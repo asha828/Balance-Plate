@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b66b325 (Revise README with project details and features)
 # Balance Plate
 A meal planner that aims to help people with dietary restrictions due to health conditions plan out meals that meet their needs. 
 
@@ -9,11 +5,7 @@ A meal planner that aims to help people with dietary restrictions due to health 
 - Select health condition that applies to you
 - Educational facts about what foods eat or avoid for your condition 
 - Filterable recipe cards
-<<<<<<< HEAD
 <img src="https://github.com/user-attachments/assets/109ef01d-ee83-42ac-a137-e713a90275eb" alt="balance-plate-recipe-filte" width="500" height="300" style="border-radius: 15px;"/>
-
-=======
->>>>>>> b66b325 (Revise README with project details and features)
 - Tracking recipes to add to planner
 
 ## Built With
@@ -25,19 +17,5 @@ A meal planner that aims to help people with dietary restrictions due to health 
 
 - Add PostgreSQL database integration
 - Implement user authentication
-<<<<<<< HEAD
-<<<<<<< HEAD
 - Develop AI Recommendation feature 
 - Add more health conditions and recipes
-=======
-# Personalized-Meal-Planner
-A meal planner that aims to help people with dietary restrictions plan out meals that meet their needs. 
->>>>>>> 5ec295a (Initial commit)
-=======
-- Develop AI Reccomender feature 
-=======
-- Develop AI Recommendation feature 
->>>>>>> 00f7ccf (Fix typo in AI Recommendation feature)
-- Add more health conditions and recipes
-
->>>>>>> b66b325 (Revise README with project details and features)
