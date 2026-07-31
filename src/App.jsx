@@ -10,6 +10,7 @@ import Health from "./Health";
 
 export default function App() {
   const [page, setPage] = useState("home");
+  const [selectedConditions, setSelectedConditions] = useState([]);
   return (
     // layout 
     // sidebar 
@@ -24,8 +25,13 @@ export default function App() {
         <Navbar setPage={setPage} />
 
         <main className='content'>
-          {page === "home" && (<Home setPage={setPage} />)}
-          {page === "health" && (<Health />)}
+          {page === "home" && (<Home
+            setPage={setPage}
+            selectedConditions={selectedConditions} />)}
+          {page === "health" && (<Health
+            selectedConditions={selectedConditions}
+            setSelectedConditions={setSelectedConditions}
+          />)}
           {page === "recipes" && (<Recipe />)}
           {page === "groceries" && (<Groceries />)}
 

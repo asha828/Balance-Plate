@@ -5,7 +5,7 @@ import { ConditionCard } from "./components"
 import conditions from "./health-conditions.js";
 
 
-export default function Health() {
+export default function Health({ selectedConditions, setSelectedConditions }) {
     const [currentIndex, setCurrentIndex] = useState(0);
 
 
@@ -27,7 +27,10 @@ export default function Health() {
                 </button>
                 <div className='condition-card-content'>
 
-                    <ConditionCard condition={conditions[currentIndex]} />
+                    <ConditionCard
+                        condition={conditions[currentIndex]}
+                        selectedConditions={selectedConditions}
+                        setSelectedConditions={setSelectedConditions} />
 
                 </div>
 

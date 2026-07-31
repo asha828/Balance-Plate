@@ -16,7 +16,8 @@ li::marker {
 
 ul {
     padding-left: 20px;
-    list-style-type: circle;
+    list-style-type: none;
+
 }
 
 .condition-grid {
@@ -60,15 +61,13 @@ ul {
 .condition-card-content {
 
     width: 450px;
-    height: 500px;
+    height: 520px;
     padding: 24px;
     border-radius: 10px;
     /* Smooth corners */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-    background:
-        linear-gradient(180deg,
-            #FFF8E5 0%,
-            #FEF4CD 100%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    background-color: #FAF6EA;
+
 
     backface-visibility: hidden;
 
@@ -76,28 +75,56 @@ ul {
 }
 
 .condition-content h2 {
-    color: #4F7DF3;
+    color: var(--blue-text);
 }
 
 .img-condition {
     margin-bottom: 10px;
 }
 
-.learn-button {
+.buttons {
     position: absolute;
-    margin-top: 820px;
+    margin-top: 860px;
     left: 50%;
     transform: translateX(-50%);
+
+    display: flex;
+    gap: 12px;
+}
+
+.select-button {
+    height: 50px;
+    width: 130px;
     padding: 12px 22px;
     border: 1px solid white;
     border-radius: 14px;
-    background: linear-gradient(135deg,
-            var(--blue-dark),
-            #9FC3EA);
+    background: var(--blue-light);
     cursor: pointer;
     color: white;
     font-family: "MyFont";
     font-size: 12px;
+}
+
+.learn-button {
+    height: 50px;
+    width: 130px;
+    padding: 12px 22px;
+    border: 1px solid white;
+    border-radius: 14px;
+    background: var(--blue-light);
+    cursor: pointer;
+    color: white;
+    font-family: "MyFont";
+    font-size: 12px;
+
+}
+
+.select-button:hover {
+    background: var(--blue);
+}
+
+.select-button.selected {
+    background: var(--sage-dark)
 }
 
 .learn-button:hover {
@@ -122,7 +149,7 @@ ul {
 .dot.active {
     width: 24px;
     border-radius: 999px;
-    background-color: #4F7DF3;
+    background-color: var(--blue-text);
 }
 
 /* Inner wrapper holds the actual 3D layout context */
@@ -193,11 +220,36 @@ ul {
 }
 
 .info-card {
-    border-top: 4px solid var(--blue-dark);
-    border-right: 4px solid var(--blue-dark);
-    background: #FFFBF2;
+    border-top: 1px solid #A5A193;
+    border-bottom: 1px solid #A5A193;
+    border-left: 1px solid #A5A193;
+    border-right: 1px solid #A5A193;
+    background: var(--bg);
     border-radius: 18px;
     padding: 1rem;
-    margin-top: 30px;
+    margin-top: 50px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, .06);
+}
+
+.good-food {
+
+    background: var(--sage);
+    border-radius: 18px;
+    padding: 1rem;
+    padding-left: 0px;
+    height: 180px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .1);
+
+}
+
+
+.bad-food {
+
+    background: var(--coral);
+    border-radius: 18px;
+    padding: 1rem;
+    padding-left: 0px;
+    height: 180px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .1);
+
 }

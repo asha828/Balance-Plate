@@ -98,12 +98,26 @@ export function RecipeCard({
     );
 }
 
-export function ConditionCard({ condition }) {
+export function ConditionCard({
+    condition,
+    selectedConditions,
+    setSelectedConditions
+}) {
     const [isFlipped, setIsFlipped] = useState(false);
-
     const handleFlip = () => {
         setIsFlipped(!isFlipped);
     };
+    const isSelected = selectedConditions.includes(condition.id);
+    const handleSelect = () => {
+        if (isSelected) {
+            setSelectedConditions(
+                selectedConditions.filter(id => id !== condition.id)
+            );
+        } else {
+            setSelectedConditions([...selectedConditions, condition.id]);
+        }
+    };
+
 
 
     return (
@@ -129,10 +143,22 @@ export function ConditionCard({ condition }) {
                         </div>
 
                     </div>
+                    <div className='buttons'>
 
-                    <button onClick={handleFlip} className="learn-button">
-                        Learn more ⤵︎
-                    </button>
+                        <button onClick={handleFlip} className="learn-button">
+                            Learn More ⤵︎
+                        </button>
+
+                        <button
+                            className={`select-button ${selectedConditions.includes(condition.id) ? "selected" : ""}`}
+                            onClick={handleSelect}
+                        >
+
+                            {isSelected ? "Selected ✓" : "Select +"}
+                        </button>
+                    </div>
+
+
                 </div>
 
 
@@ -151,28 +177,33 @@ export function ConditionCard({ condition }) {
 
                                     <h3 style={{ fontSize: '16px', color: "var(--sage-text)" }}>✓ Foods to Eat</h3>
                                     <br></br>
-                                    <ul>
-                                        {condition.goodFoods.map((food, id) => (
+                                    <div className="good-food">
+                                        <ul>
+                                            {condition.goodFoods.map((food, id) => (
 
-                                            <li key={id}>{food}</li>
-                                        ))}
-                                    </ul>
+                                                <li key={id}>{food}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
                                 </div>
+
 
                                 <div className="food-content">
 
                                     <h3 style={{ fontSize: '17px', color: "var(--accent)" }}>✕ Foods to Avoid</h3>
                                     <br></br>
-                                    <ul>
-                                        {condition.badFoods.map((food, id) => (
+                                    <div className="bad-food">
+                                        <ul>
+                                            {condition.badFoods.map((food, id) => (
 
-                                            <li key={id}>{food}</li>
-                                        ))}
-                                    </ul>
+                                                <li key={id}>{food}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                             <br></br>
-                            <h3 style={{ fontSize: '17px', color: "var(--text)" }}>Nutrition Focus: </h3>
+                            <h3 style={{ fontSize: '17px', color: "#A5A193" }}>Nutrition Focus: </h3>
 
                             <br></br>
                             <div className="food-tags">
@@ -200,10 +231,13 @@ export function ConditionCard({ condition }) {
 
                         </div>
                     </div>
+                    <div className='buttons'>
 
-                    <button onClick={handleFlip} className="learn-button">
-                        ⤵︎
-                    </button>
+
+                        <button onClick={handleFlip} className="learn-button">
+                            ⤵︎
+                        </button>
+                    </div>
                 </div>
 
 

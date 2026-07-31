@@ -1,18 +1,28 @@
 import './App.css'
-
+import { useMemo } from "react";
 import diabetesIcon from './Images/diabetes.png';
 import glutenIcon from './Images/gluten-free.png';
 import hypertensionIcon from './Images/hypertension.png';
 import ibsIcon from './Images/intestine.png';
+import conditions from "./health-conditions.js";
 
-
-import recipes from "./recipes.js";
-
-import { Cards, RecipeCard } from "./components"
+import { Cards } from "./components"
 
 
 
-export default function Home({ setPage }) {
+export default function Home({ setPage, selectedConditions }) {
+    const selectedConditionData = conditions.filter(condition =>
+        selectedConditions.includes(condition.id)
+    );
+    const randomFacts = useMemo(() => {
+        return selectedConditionData.map(condition => ({
+            id: condition.id,
+            title: condition.title,
+            fact: condition.facts[
+                Math.floor(Math.random() * condition.facts.length)
+            ]
+        }));
+    }, [selectedConditionData]);
     return (
 
         <>
@@ -24,15 +34,15 @@ export default function Home({ setPage }) {
             </div>
             <br></br>
             <br></br>
-
+            <br></br>
 
 
             <div className='flex-container'>
                 <div style={{
-                    textAlign: "left", maxWidth: '400px', padding: '16px',
+                    textAlign: "left", maxWidth: '420px', padding: '0px',
 
                 }}>
-                    <p>Balance Plate helps people with dietary restrictions and health conditions find safe recipes, plan their meals, and build groccery lists tailored to what your dietary needs are.</p>
+                    <p>Balance Plate helps people with dietary restrictions and health conditions find safe recipes, plan their meals, and build groccery lists tailored to what their dietary needs are.</p>
                     <br></br>
                     <br></br>
 
@@ -76,17 +86,22 @@ export default function Home({ setPage }) {
 
                 </div>
 
+                <div className='food-tip-container'>
+                    <h4>Daily Food Tips</h4>
 
-                {recipes.slice(0, 1).map(recipe => (
-                    <RecipeCard
-                        key={recipe.id}
-                        recipeName={recipe.title}
-                        recipeImage={recipe.image}
-                        time={recipe.time}
-                        tags={recipe.tags}
-                        calories={recipe.calories}
-                    />
-                ))}
+                    <div className='food-tip-content'>
+                        <ul>
+                            {randomFacts.map(condition => (
+                                <div key={condition.id}>
+                                    <li>{condition.fact}</li>
+                                </div>
+                            ))}
+
+
+                        </ul>
+
+                    </div>
+                </div>
 
             </div>
 
