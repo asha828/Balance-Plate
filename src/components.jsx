@@ -61,7 +61,7 @@ export function RecipeCard({
                     </div>
                     <div className="inline-container">
                         <img src={calIcon} alt="Time Icon" width="16" height="16" />
-                        <p className='recipe-icon'>{calories} </p>
+                        <p className='recipe-icon'>{calories} cal</p>
                     </div>
                 </div>
 

@@ -1,12 +1,22 @@
-import { useState } from 'react';
 import './App.css'
 import './Recipe.css'
-import recipes from "./recipes.js";
+import { useEffect, useState } from "react";
 import tagData from "./tags.json";
 import { RecipeCard } from "./components"
 
 export default function Recipe() {
+    const [recipes, setRecipes] = useState([]);
     const [selectedFilter, setSelectedFilter] = useState("All");
+
+    useEffect(() => {
+        fetch("http://localhost:3001/recipes")
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+                setRecipes(data);
+            })
+            .catch((err) => console.error(err));
+    }, []);
 
 
 
