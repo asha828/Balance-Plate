@@ -8,7 +8,7 @@ A meal planner that aims to help people with dietary restrictions due to health 
 - Express.js REST API that retrieves recipes and associated nutrition tags from the database
 - Filterable recipe cards
 - Tracking recipes to add to planner
-<img src="/Users/ashathomas/balance_plate_img.png" alt="balance-plate-recipe-filte" width="500" height="300" style="border-radius: 15px;"/>
+<img src="/Users/ashathomas/personalized-meal-planner/balance_plate_img.png" alt="balance-plate-recipe-filte" width="500" height="300" style="border-radius: 15px;"/>
 
 ## Built With
 - React
